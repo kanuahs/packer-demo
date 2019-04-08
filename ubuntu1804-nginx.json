@@ -84,7 +84,7 @@
       "source_image": "ubuntu-1804-bionic-v20190320",
       "ssh_username": "packer",
       "zone": "us-central1-a",
-      "machine_type": "f1-micro",
+      "machine_type": "f1-micro"
     }
   ],
   "provisioners": [
