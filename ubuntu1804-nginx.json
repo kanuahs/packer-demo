@@ -1,7 +1,8 @@
 {
   "description": "",
   "variables": {
-    "version": "0.0.1-{{isotime \"2006-01-02_03-04-05\"}}",
+    "version": "0.0.1",
+    "time":"{{isotime \"2006-01-02_03-04-05\"}}",
     "hostname": "ubuntuvm",
     "fullname": "user1",
     "username": "user1",
@@ -84,7 +85,6 @@
       "ssh_username": "packer",
       "zone": "us-central1-a",
       "machine_type": "f1-micro",
-      "image_name":"packer-ubuntu-{{ user `version` }}"
     }
   ],
   "provisioners": [
@@ -105,7 +105,7 @@
       {
         "type": "docker-tag",
         "repository": "kanuahs93/packer-ubuntu",
-        "tag": "{{ user `version` }}",
+        "tag": "{{ user `version` }}-{{ user `time` }}",
         "only":["docker"]
       },
       {
