@@ -112,6 +112,18 @@
         "type": "docker-push",
         "only":["docker"]
       }
+    ],
+    [
+      {
+        "type": "docker-tag",
+        "repository": "kanuahs93/packer-ubuntu",
+        "tag": "latest",
+        "only":["docker"]
+      },
+      {
+        "type": "docker-push",
+        "only":["docker"]
+      }
     ]
   ]
 }
