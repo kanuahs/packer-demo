@@ -1,0 +1,9 @@
+.vscode
+
+# Credentials
+gcloud/packer-account.json
+
+
+# Packer cahce and outputs
+packer_cache
+output-*
